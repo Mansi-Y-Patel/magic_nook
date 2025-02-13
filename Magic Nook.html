@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magic Nook</title>
+    <link rel="icon" type="image/x-icon" href="logo1.jpg">
+
+    <!-- Font Awesome CDN (For icons) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class=" w-full">
+
+    <!-- Navbar -->
+    <div class="bg-black text-white w-full flex flex-row items-center justify-between fixed top-0 left-0">
+        <div class="">
+            <a href="Magic Nook.html" class="flex flex-row p-3 items-center gap-5">
+                <img src="logo.png" alt="" class="h-12">
+                <div class="">
+                    <div class="text-xl font-bold">Magic Nook</div>
+                    <div class="text-xs">Book Store</div>
+                </div>
+            </a>
+        </div>
+
+        <!-- Searchbar -->
+        <div class="p-3 text-black">
+            <div class="flex gap-2 items-center">
+                <i class="fa-solid fa-cart-shopping text-white mx-3 text-xl"></i>
+                <input type="text" id="searchInput" placeholder="Search a book"
+                    class="px-4 py-2 border border-gray-400 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-400"
+                    oninput="searchBooks()">
+
+                <button onclick="searchBooks()"
+                    class="rounded-lg font-semibold p-2 text-white bg-blue-700 hover:font-bold hover:bg-blue-900">
+                    <i class="fa-solid fa-magnifying-glass "></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="m-24">
+
+        <!-- Techinal Books -->
+        <div class="m-6 flex flex-col gap-5">
+            <div class="font-bold text-3xl flex m-2">Techinal</div>
+
+            <div class="border-2 border-black rounded-3xl hover:shadow-xl hover:shadow-gray-700">
+                <button onclick="toggleAccordion(1)" class="text-left">
+                    <div class="m-2 p-6 flex flex-row gap-5">
+                        <img src="CEH NEW.jpg" alt="" class="w-44 h-auto">
+                        <div class="m-3 grid grid-col gap-2">
+                            <div class="font-bold text-3xl books">Certified Ethical Hacker (CEH V13)</div>
+                            <div class="font-semibold text-lg">Author: Steve Brown</div>
+                            <div class="">Looking to pass the Certified Ethical Hacker (CEH V13) exam and elevate your
+                                career in cybersecurity? The CEH V13 Practice Exam Guide is your ultimate preparation
+                                tool, designed to help you master the latest version of the CEH exam.</div>
+                            <div class="font-semibold">Ratings: <i class="fa-solid fa-star"
+                                    style="color: #eb791c;"></i><i class="fa-solid fa-star"
+                                    style="color: #eb791c;"></i><i class="fa-solid fa-star"
+                                    style="color: #eb791c;"></i><i class="fa-solid fa-star"
+                                    style="color: #eb791c;"></i><i class="fa-solid fa-star" style="color: #eb791c;"></i>
+                            </div>
+                            <div class="font-semibold">Buy Now: $9.99 </div>
+                            <div class="flex flex-row items-center justify-between">
+                                <div class="text-gray-600">Actual price: <span class="line-through">$15.00</span></div>
+                                <div
+                                    class="rounded-xl font-semibold p-2 text-white bg-blue-700 hover:font-bold hover:bg-blue-900">
+                                    Add to cart</div>
+                            </div>
+                        </div>
+                    </div>
+                </button>
+                <div id="content-1" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                    <div class="m-2 px-10 py-1">
+                        <div class="font-semibold">More about the book:</div>
+                        This comprehensive guide
+                        features
+                        500 practice questions, each with detailed explanations, ensuring you thoroughly
+                        understand
+                        the concepts and techniques needed to succeed.<br>
+                        Whether you’re a beginner or an experienced professional, this guide is structured to support
+                        your exam readiness with a variety of question types:
+                        Multiple choice questions, Fill-in-the-gap exercises, Short scenario-based questions
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-2 border-black rounded-3xl hover:shadow-xl hover:shadow-gray-700">
+                <button onclick="toggleAccordion(2)" class="text-left">
+                    <div class="m-2 p-6 flex flex-row gap-5">
+                        <img src="CISA NEW.jpg" alt="" class="w-44 h-auto">
+                        <div class="m-3 grid grid-col gap-2">
+                            <div class="font-bold text-3xl">CISA - Certified Information Systems Auditor Study Guide -
+                                Second
+                                Edition</div>
+                            <div class="font-semibold text-lg">Author: Hemang Doshi</div>
+                            <div class="">Master the practical aspects of information systems auditing to pass the CISA
+                                exam and accelerate your career.</div>
+                            <div class="font-semibold">Ratings: <i class="fa-solid fa-star"
+                                    style="color: #eb791c;"></i><i class="fa-solid fa-star"
+                                    style="color: #eb791c;"></i><i class="fa-solid fa-star"
+                                    style="color: #eb791c;"></i><i class="fa-solid fa-star"
+                                    style="color: #eb791c;"></i><i class="fa-regular fa-star-half-stroke"
+                                    style="color: #eb791c;"></i></div>
+                            <div class="flex flex-row items-center justify-between">
+                                <div class="font-semibold">Buy Now: $91.99</div>
+                                <div
+                                    class="rounded-xl font-semibold p-2 text-white bg-blue-700 hover:font-bold hover:bg-blue-900">
+                                    Add to cart</div>
+                            </div>
+                        </div>
+                    </div>
+                </button>
+                <div id="content-2" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                    <div class="m-2 px-10 py-1">
+                        <div class="font-semibold">More about the book:</div>
+                        Key Features:
+                        Enhance your understanding of each topic by practicing a set of exam-oriented questions
+                        Revise concepts easily focusing on key aspects from CISA exam perspective, highlighted in each
+                        chapter. Accelerate your exam prep with additional study material including flashcards, practice
+                        questions, and exam tips.
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-2 border-black rounded-3xl hover:shadow-xl hover:shadow-gray-700">
+                <button onclick="toggleAccordion(3)" class="text-left">
+                    <div class="m-2 p-6 flex flex-row gap-5">
+                        <img src="Sec +.jpg" alt="" class="w-44 h-auto">
+                        <div class="m-3 grid grid-col gap-2">
+                            <div class="font-bold text-3xl">CompTIA Security+ All-in-One Exam Guide, Sixth Edition (Exam
+                                SY0-601)</div>
+                            <div class="font-semibold text-lg">Author: Wm. Arthur Conklin</div>
+                            <div class="">Get complete coverage of all objectives included on the CompTIA Security+ exam
+                                SY0-601 from this comprehensive resource.</div>
+                            <div class="font-semibold">Ratings: <i class="fa-solid fa-star"
+                                    style="color: #eb791c;"></i><i class="fa-solid fa-star"
+                                    style="color: #eb791c;"></i><i class="fa-solid fa-star"
+                                    style="color: #eb791c;"></i><i class="fa-solid fa-star"
+                                    style="color: #eb791c;"></i><i class="fa-solid fa-star" style="color: #eb791c;"></i>
+                            </div>
+                            <div class="flex flex-row items-center justify-between">
+                                <div class="font-semibold">Buy Now: $76.99</div>
+                                <div
+                                    class="rounded-xl font-semibold p-2 text-white bg-blue-700 hover:font-bold hover:bg-blue-900">
+                                    Add to cart</div>
+                            </div>
+                        </div>
+                    </div>
+                </button>
+                <div id="content-3" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                    <div class="m-2 px-10 py-1">
+                        <div class="font-semibold">More about the book:</div>
+                        Written by a team of leading information security
+                        experts,
+                        this authoritative guide fully addresses the skills required to perform essential
+                        security
+                        functions and to secure hardware, systems, and software. You’ll find learning objectives
+                        at the
+                        beginning of each chapter, exam tips, practice exam questions, and in-depth
+                        explanations.<br>
+                        Covers all exam domains, including:
+                        Threats, Attacks, and Vulnerabilities
+                        Architecture and Design
+                        Implementation
+                        Operations and Incident Response
+                        Governance, Risk, and Compliance
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Fictional Books -->
+        <div class="m-6 flex flex-col gap-5">
+            <div class="font-bold text-3xl flex m-2">Fiction</div>
+
+            <div class="border-2 border-black rounded-3xl hover:shadow-xl hover:shadow-gray-700">
+                <button onclick="toggleAccordion(4)" class="text-left">
+                    <div class="m-2 p-6 flex flex-row gap-5">
+                        <img src="too good to be true.jpg" alt="" class="w-44 h-auto">
+                        <div class="m-3 grid grid-col gap-2">
+                            <div class="font-bold text-3xl">Too Good To Be True: A funny, smart will-they-won't-they
+                                romance by
+                                MostlySane</div>
+                            <div class="font-semibold text-lg">Author: Prajakta Koli</div>
+                            <div class="">From one of India's most-loved creators comes something new to fall in love
+                                with.
+                            </div>
+                            <div class="font-semibold">Ratings: <i class="fa-solid fa-star"
+                                    style="color: #eb791c;"></i><i class="fa-solid fa-star"
+                                    style="color: #eb791c;"></i><i class="fa-solid fa-star"
+                                    style="color: #eb791c;"></i><i class="fa-solid fa-star"
+                                    style="color: #eb791c;"></i><i class="fa-regular fa-star-half-stroke"
+                                    style="color: #eb791c;"></i></div>
+                            <div class="flex flex-row items-center justify-between">
+                                <div class="font-semibold">Buy Now: $10.00</div>
+                                <div
+                                    class="rounded-xl font-semibold p-2 text-white bg-blue-700 hover:font-bold hover:bg-blue-900">
+                                    Add to cart</div>
+                            </div>
+                        </div>
+                    </div>
+                </button>
+                <div id="content-4" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                    <div class="m-2 px-10 py-1">
+                        <div class="font-semibold">More about the book:</div>
+                        A hilarious and heartwarming will-they-won’t-they
+                        romance by MostlySane!
+                        What happens when opposites collide in the most unexpected way? Meet a fiercely
+                        independent woman and a charming yet infuriating man who can’t seem to stay out of
+                        each other’s way. Filled with witty banter, laugh-out-loud moments, and just the right
+                        amount of chaos, this novel takes you on a rollercoaster of emotions.
+                        Will they fight their undeniable chemistry, or will fate have the last laugh? Find out in
+                        this smart, funny, and irresistibly entertaining love story that proves some things are just
+                        Too Good To Be True!
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-2 border-black rounded-3xl hover:shadow-xl hover:shadow-gray-700">
+                <button onclick="toggleAccordion(5)" class="text-left">
+                    <div class="m-2 p-6 flex flex-row gap-5">
+                        <img src="To kill a Mockingbird.jpg" alt="" class="w-44 h-auto">
+                        <div class="m-3 grid grid-col gap-2">
+                            <div class="font-bold text-3xl">To Kill a Mockingbird</div>
+                            <div class="font-semibold text-lg">Author: Harper Lee</div>
+                            <div class="">The unforgettable novel of a childhood in a sleepy Southern town and the
+                                crisis of
+                                conscience that rocked it, To Kill A Mockingbird became both an instant bestseller and a
+                                critical success when it was first published in 1960. It went on to win the Pulitzer
+                                Prize in
+                                1961 and was later made into an Academy Award-winning film, also a classic.
+                            </div>
+                            <div class="font-semibold">Ratings: <i class="fa-solid fa-star"
+                                    style="color: #eb791c;"></i><i class="fa-solid fa-star"
+                                    style="color: #eb791c;"></i><i class="fa-solid fa-star"
+                                    style="color: #eb791c;"></i><i class="fa-solid fa-star"
+                                    style="color: #eb791c;"></i><i class="fa-regular fa-star"
+                                    style="color: #eb791c;"></i></div>
+                            <div class="flex flex-row items-center justify-between">
+                                <div class="font-semibold">Buy Now: $8.60</div>
+                                <div
+                                    class="rounded-xl font-semibold p-2 text-white bg-blue-700 hover:font-bold hover:bg-blue-900">
+                                    Add to cart</div>
+                            </div>
+                        </div>
+                    </div>
+                </button>
+                <div id="content-5" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                    <div class="m-2 px-10 py-1">
+                        <div class="font-semibold">More about the book:</div>
+                        A timeless classic of justice, morality, and human dignity.
+                        Harper Lee’s Pulitzer Prize-winning novel takes readers to the American South, where
+                        young Scout Finch navigates a world of innocence and prejudice. Through the eyes of a
+                        child, the story unfolds around her father, Atticus Finch, a principled lawyer defending a
+                        Black man falsely accused of a crime. With themes of racial injustice, compassion, and
+                        courage, this novel remains a powerful exploration of humanity and the fight for truth.
+                        A must-read for lovers of classic literature, To Kill a Mockingbird is as relevant today
+                        as it was when first published.
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-2 border-black rounded-3xl hover:shadow-xl hover:shadow-gray-700">
+                <button onclick="toggleAccordion(6)" class="text-left">
+                    <div class="m-2 p-6 flex flex-row gap-5">
+                        <img src="IMG_1067.JPG" alt="" class="w-44 h-auto">
+                        <div class="m-3 grid grid-col gap-2">
+                            <div class="font-bold text-3xl">The Great Gatsby: The Only Authorized Edition</div>
+                            <div class="font-semibold text-lg">Author: F. Scott Fitzgerald</div>
+                            <div class="">The Great Gatsby, F. Scott Fitzgerald's third book, stands as the supreme
+                                achievement
+                                of his career. This exemplary novel of the Jazz Age has been acclaimed by generations of
+                                readers. The story of the fabulously wealthy Jay Gatsby and his love for the beautiful
+                                Daisy
+                                Buchanan, of lavish parties on Long Island at a time when The New York Times noted "gin
+                                was the
+                                national drink and sex the national obsession," it is an exquisitely crafted tale of
+                                America in
+                                the 1920s.</div>
+                            <div class="font-semibold">Ratings: <i class="fa-solid fa-star"
+                                    style="color: #eb791c;"></i><i class="fa-solid fa-star"
+                                    style="color: #eb791c;"></i><i class="fa-solid fa-star"
+                                    style="color: #eb791c;"></i><i class="fa-solid fa-star"
+                                    style="color: #eb791c;"></i><i class="fa-solid fa-star" style="color: #eb791c;"></i>
+                            </div>
+                            <div class="font-semibold">Buy Now: $43.94</div>
+                            <div class="flex flex-row items-center justify-between">
+                                <div class="text-gray-600">Actual price: <span class="line-through">$50.00</span></div>
+                                <div
+                                    class="rounded-xl font-semibold p-2 text-white bg-blue-700 hover:font-bold hover:bg-blue-900">
+                                    Add to cart</div>
+                            </div>
+                        </div>
+                    </div>
+                </button>
+                <div id="content-6" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                    <div class="m-2 px-10 py-1">
+                        <div class="font-semibold">More about the book:</div>
+                        A dazzling tale of love, ambition, and the American Dream.
+                        F. Scott Fitzgerald’s masterpiece transports readers to the glittering Jazz Age, where wealth
+                        and
+                        extravagance hide a world of longing and heartbreak. The enigmatic Jay Gatsby throws lavish
+                        parties in hopes of rekindling a lost love, while narrator Nick Carraway observes the illusions
+                        and decadence of 1920s high society. A story of obsession, betrayal, and the pursuit of an
+                        unattainable dream, The Great Gatsby remains one of the greatest American novels of all time.
+                        Step into a world of glamour and tragedy with this timeless classic
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Non-Fictional Books -->
+        <div class="m-6 flex flex-col gap-5">
+            <div class="font-bold text-3xl flex m-2">Non-Fiction</div>
+
+            <div class="border-2 border-black rounded-3xl hover:shadow-xl hover:shadow-gray-700">
+                <button onclick="toggleAccordion(7)" class="text-left">
+                    <div class="m-2 p-6 flex flex-row gap-5">
+                        <img src="IMG_1066.JPG" alt="" class="w-44 h-auto">
+                        <div class="m-3 grid grid-col gap-2">
+                            <div class="font-bold text-3xl">Atomic Habits</div>
+                            <div class="font-semibold text-lg">Author: James Clear</div>
+                            <div class="">#1 New York Times bestseller.
+                                Over 20 million copies sold!
+                                Translated into 60+ languages!
+                                Tiny Changes, Remarkable Results</div>
+                            <div class="font-semibold">Ratings: <i class="fa-solid fa-star"
+                                    style="color: #eb791c;"></i><i class="fa-solid fa-star"
+                                    style="color: #eb791c;"></i><i class="fa-solid fa-star"
+                                    style="color: #eb791c;"></i><i class="fa-solid fa-star"
+                                    style="color: #eb791c;"></i><i class="fa-regular fa-star"
+                                    style="color: #eb791c;"></i></div>
+                            <div class="flex flex-row items-center justify-between">
+                                <div class="font-semibold">Buy Now: $23.15</div>
+                                <div
+                                    class="rounded-xl font-semibold p-2 text-white bg-blue-700 hover:font-bold hover:bg-blue-900">
+                                    Add to cart</div>
+                            </div>
+                        </div>
+                    </div>
+                </button>
+                <div id="content-7" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                    <div class="m-2 px-10 py-1">
+                        <div class="font-semibold">More about the book:</div>
+                        Transform your life one small habit at a time.
+                        James Clear’s bestselling book reveals the science behind how tiny changes can lead to
+                        remarkable results. With practical strategies for breaking bad habits, building good ones, and
+                        making lasting improvements, Atomic Habits teaches you how to harness the power of habit
+                        formation. Whether you're looking to boost productivity, improve focus, or achieve personal
+                        growth, this book provides a clear roadmap to success.
+                        Unlock the power of small habits and create big change in your life!
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-2 border-black rounded-3xl hover:shadow-xl hover:shadow-gray-700">
+                <button onclick="toggleAccordion(8)" class="text-left">
+                    <div class="m-2 p-6 flex flex-row gap-5">
+                        <img src="IMG_1068.JPG" alt="" class="w-44 h-auto">
+                        <div class="m-3 grid grid-col gap-2">
+                            <div class="font-bold text-3xl">Sapiens: A Brief History of Humankind</div>
+                            <div class="font-semibold text-lg">Author: Yuval Noah Harari</div>
+                            <div class="">New York Times Readers’ Pick: Top 100 Books of
+                                the 21st
+                                Century • The Summer Reading Pick for President Barack Obama and Bill Gates
+
+                                Official U.S. edition with full color illustrations throughout.</div>
+                            <div class="font-semibold">Ratings: <i class="fa-solid fa-star"
+                                    style="color: #eb791c;"></i><i class="fa-solid fa-star"
+                                    style="color: #eb791c;"></i><i class="fa-solid fa-star"
+                                    style="color: #eb791c;"></i><i class="fa-solid fa-star"
+                                    style="color: #eb791c;"></i><i class="fa-solid fa-star" style="color: #eb791c;"></i>
+                            </div>
+                            <div class="font-semibold">Buy Now: $45.00 </div>
+                            <div class="flex flex-row items-center justify-between">
+                                <div class="text-gray-600">Actual price: <span class="line-through">$55.00</span></div>
+                                <div
+                                    class="rounded-xl font-semibold p-2 text-white bg-blue-700 hover:font-bold hover:bg-blue-900">
+                                    Add to cart</div>
+                            </div>
+                        </div>
+                    </div>
+                </button>
+                <div id="content-8" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                    <div class="m-2 px-10 py-1">
+                        <div class="font-semibold">More about the book:</div>
+                        A fascinating journey through the history of humankind.
+                        Yuval Noah Harari’s groundbreaking bestseller explores how Homo sapiens rose to dominate the
+                        planet. From the emergence of early humans to the revolutions that shaped modern society,
+                        Sapiens unpacks history, science, and philosophy in an engaging and thought-provoking way.
+                        With insights into culture, technology, and the future of humanity, this book challenges
+                        everything we think we know about ourselves.
+                        A must-read for history lovers, deep thinkers, and anyone curious about the human story.
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-2 border-black rounded-3xl hover:shadow-xl hover:shadow-gray-700">
+                <button onclick="toggleAccordion(9)" class="text-left">
+                    <div class="m-2 p-6 flex flex-row gap-5">
+                        <img src="IMG_1065.JPG" alt="" class="w-44 h-auto">
+                        <div class="m-3 grid grid-col gap-2">
+                            <div class="font-bold text-3xl">The Power of Habit: Why We Do What We Do in Life and
+                                Business</div>
+                            <div class="font-semibold text-lg">Author: Charles Duhigg</div>
+                            <div class="">MORE THAN 3 MILLION COPIES SOLD • This instant
+                                classic
+                                explores how we can change our lives by changing our habits.
+
+                                “Few [books] become essential manuals for business and living. The Power of Habit is an
+                                exception.”—Financial Times
+
+                                A WALL STREET JOURNAL AND FINANCIAL TIMES BEST BOOK OF THE YEAR
+                            </div>
+                            <div class="font-semibold">Ratings: <i class="fa-solid fa-star"
+                                    style="color: #eb791c;"></i><i class="fa-solid fa-star"
+                                    style="color: #eb791c;"></i><i class="fa-solid fa-star"
+                                    style="color: #eb791c;"></i><i class="fa-solid fa-star"
+                                    style="color: #eb791c;"></i><i class="fa-regular fa-star-half-stroke"
+                                    style="color: #eb791c;"></i></div>
+                            <div class="flex flex-row items-center justify-between">
+                                <div class="font-semibold">Buy Now: $43.94</div>
+                                <div
+                                    class="rounded-xl font-semibold p-2 text-white bg-blue-700 hover:font-bold hover:bg-blue-900">
+                                    Add to cart</div>
+                            </div>
+                        </div>
+                    </div>
+                </button>
+                <div id="content-9" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                    <div class="m-2 px-10 py-1">
+                        <div class="font-semibold">More about the book:</div>
+                        Unlock the science of habit and transform your life.
+                        In this groundbreaking book, Charles Duhigg explores the fascinating science behind why we do
+                        what we do. From personal routines to corporate success and social movements, The Power of
+                        Habit reveals how habits shape our lives—and how we can change them. Packed with real-life
+                        stories and cutting-edge research, this book offers powerful insights on breaking bad habits,
+                        building good ones, and making lasting change.
+                        Discover how small shifts in behavior can lead to extraordinary results!
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Us -->
+    <div class="bg-black text-white p-6">
+        <div class="m-5 flex justify-center text-xl font-bold">ABOUT OUR TEAM</div>
+        <div class="flex flex-row justify-center gap-10">
+            <a href="mansi.html">
+                <div
+                    class="p-4 rounded-xl text-black font-bold bg-white hover:font-extrabold hover:shadow-xl hover:shadow-gray-600">
+                    Mansi
+                    Patel</div>
+            </a>
+            <a href="aman.html">
+                <div
+                    class="p-4 rounded-xl text-black font-bold bg-white hover:font-extrabold hover:shadow-xl hover:shadow-gray-600">
+                    Amankumar Desai</div>
+            </a>
+            <a href="mayank.html">
+                <div
+                    class="p-4 rounded-xl text-black font-bold bg-white hover:font-extrabold hover:shadow-xl hover:shadow-gray-600">
+                    Mayank
+                    Ramani</div>
+            </a>
+            <a href="meet.html">
+                <div
+                    class="p-4 rounded-xl text-black font-bold bg-white hover:font-extrabold hover:shadow-xl hover:shadow-gray-600">
+                    Meet
+                    Patel</div>
+            </a>
+        </div>
+    </div>
+
+    <script>
+
+        function toggleAccordion(index) {
+            const content = document.getElementById(`content-${index}`);
+            const icon = document.getElementById(`icon-${index}`);
+
+            // Toggle the content's max-height for smooth opening and closing
+            if (content.style.maxHeight && content.style.maxHeight !== '0px') {
+                content.style.maxHeight = '0';
+                icon.innerHTML = upSVG;
+            } else {
+                content.style.maxHeight = content.scrollHeight + 'px';
+                icon.innerHTML = downSVG;
+            }
+        }
+
+
+        function searchBooks() {
+            let input = document.getElementById("searchInput").value.toLowerCase();
+            console.log(input);
+            let items = document.querySelectorAll(".border-2");
+
+            items.forEach(item => {
+                let titleElement = item.querySelector(".font-bold.text-3xl");
+                if (titleElement) {
+                    let text = titleElement.textContent.toLowerCase();
+                    item.style.display = text.includes(input) ? "" : "none";
+                }
+            });
+        }
+    </script>
+
+</body>
+
+</html>
