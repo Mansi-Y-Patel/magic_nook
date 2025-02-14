@@ -19,12 +19,12 @@
     </style>
 </head>
 
-<body class=" w-full">
+<body class="w-full">
 
     <!-- Navbar -->
-    <div class="bg-black text-white w-full flex flex-row items-center justify-between fixed top-0 left-0">
+    <div class="bg-black text-white w-full lg:flex lg:flex-row items-center justify-between fixed top-0 left-0">
         <div class="">
-            <a href="index.html" class="flex flex-row p-3 items-center gap-5">
+            <a href="index.html" class="grid grid-flow-col justify-center p-3 items-center gap-5">
                 <img src="logo.png" alt="" class="h-12">
                 <div class="">
                     <div class="text-xl font-bold">Magic Nook</div>
@@ -34,7 +34,7 @@
         </div>
 
         <div class="">
-            <div class="flex flex-row text-white gap-20 font-semibold ">
+            <div class="grid grid-flow-col justify-center text-white gap-20 font-semibold ">
                 <div class="hover:font-bold"><a href="#technical">Technical</a></div>
                 <div class="hover:font-bold"><a href="#fiction">Fiction</a></div>
                 <div class="hover:font-bold"><a href="#non-fiction">Non-Foction</a></div>
@@ -43,7 +43,7 @@
 
         <!-- Searchbar -->
         <div class="p-3 text-black">
-            <div class="flex gap-2 items-center">
+            <div class="grid grid-flow-col justify-center gap-2 items-center">
                 <i class="fa-solid fa-cart-shopping text-white mx-3 text-xl"></i>
                 <input type="text" id="searchInput" placeholder="Search a book"
                     class="px-4 py-2 border border-gray-400 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-400"
@@ -58,26 +58,29 @@
     </div>
 
     <div style="background-image: url('black1.jpg');background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;">
-        <div class="pt-24 px-32 pb-12 text-white">
-            <div class="flex flex-row justify-between items-center">
+            background-attachment: fixed;
+            background-size: cover;">
+        <div class="lg:pt-24 lg:px-32 pb-12 text-white">
+            <div class="grid md:grid-flow-row lg:grid-flow-col justify-between items-center">
                 <div class="font-bold text-4xl my-6"><i>Books are a uniquely portable magic</i></div>
                 <div class="text-xl">-Stephen King</div>
             </div>
-            <div class="">For everyone who loves to read, this is the ideal location. Magic Nook offers a smooth purchasing experience with an easy-to-use interface that allows users to find books by title, author, or by ratings of the book. To assist you in making wise decisions, the website also offers reviews, comprehensive book descriptions, and specific recommendations.</div>
+            <div class="">For everyone who loves to read, this is the ideal location. Magic Nook offers a smooth
+                purchasing experience with an easy-to-use interface that allows users to find books by title, author, or
+                by ratings of the book. To assist you in making wise decisions, the website also offers reviews,
+                comprehensive book descriptions, and specific recommendations.</div>
         </div>
     </div>
 
-    <div class="mx-24">
+    <div class="lg:mx-24">
 
         <!-- Techinal Books -->
-        <div class="m-6 flex flex-col gap-5" id="technical">
+        <div class="m-6 grid grid-flow-row gap-5" id="technical">
             <div class="font-bold text-3xl flex m-2">Technical Books</div>
 
             <div class="border-2 border-black rounded-3xl hover:shadow-xl hover:shadow-gray-700">
                 <button onclick="toggleAccordion(1)" class="text-left">
-                    <div class="m-2 p-6 flex flex-row gap-5">
+                    <div class="m-2 p-6 grid md:grid-flow-row lg:grid-flow-col gap-5">
                         <img src="CEH NEW.jpg" alt="" class="w-44 h-auto">
                         <div class="m-3 grid grid-col gap-2">
                             <div class="font-bold text-3xl books">Certified Ethical Hacker (CEH V13)</div>
@@ -92,7 +95,7 @@
                                     style="color: #eb791c;"></i><i class="fa-solid fa-star" style="color: #eb791c;"></i>
                             </div>
                             <div class="font-semibold">Buy Now: $9.99 </div>
-                            <div class="flex flex-row items-center justify-between">
+                            <div class="flex flex-row items-center justify-between items-center justify-between">
                                 <div class="text-gray-600">Actual price: <span class="line-through">$15.00</span></div>
                                 <div
                                     class="rounded-xl font-semibold p-2 text-white bg-blue-700 hover:font-bold hover:bg-blue-900">
@@ -118,7 +121,7 @@
 
             <div class="border-2 border-black rounded-3xl hover:shadow-xl hover:shadow-gray-700">
                 <button onclick="toggleAccordion(2)" class="text-left">
-                    <div class="m-2 p-6 flex flex-row gap-5">
+                    <div class="m-2 p-6 grid md:grid-flow-col lg:grid-flow-col gap-5">
                         <img src="CISA NEW.jpg" alt="" class="w-44 h-auto">
                         <div class="m-3 grid grid-col gap-2">
                             <div class="font-bold text-3xl">CISA - Certified Information Systems Auditor Study Guide -
@@ -133,7 +136,7 @@
                                     style="color: #eb791c;"></i><i class="fa-solid fa-star"
                                     style="color: #eb791c;"></i><i class="fa-regular fa-star-half-stroke"
                                     style="color: #eb791c;"></i></div>
-                            <div class="flex flex-row items-center justify-between">
+                            <div class="flex flex-row items-center justify-between items-center justify-between">
                                 <div class="font-semibold">Buy Now: $91.99</div>
                                 <div
                                     class="rounded-xl font-semibold p-2 text-white bg-blue-700 hover:font-bold hover:bg-blue-900">
@@ -156,7 +159,7 @@
 
             <div class="border-2 border-black rounded-3xl hover:shadow-xl hover:shadow-gray-700">
                 <button onclick="toggleAccordion(3)" class="text-left">
-                    <div class="m-2 p-6 flex flex-row gap-5">
+                    <div class="m-2 p-6 grid md:grid-flow-row lg:grid-flow-col gap-5">
                         <img src="Sec +.jpg" alt="" class="w-44 h-auto">
                         <div class="m-3 grid grid-col gap-2">
                             <div class="font-bold text-3xl">CompTIA Security+ All-in-One Exam Guide, Sixth Edition (Exam
@@ -202,12 +205,12 @@
         </div>
 
         <!-- Fictional Books -->
-        <div class="m-6 flex flex-col gap-5" id="fiction">
+        <div class="m-6 grid grid-flow-row  gap-5" id="fiction">
             <div class="font-bold text-3xl flex m-2">Fictional Books</div>
 
             <div class="border-2 border-black rounded-3xl hover:shadow-xl hover:shadow-gray-700">
                 <button onclick="toggleAccordion(4)" class="text-left">
-                    <div class="m-2 p-6 flex flex-row gap-5">
+                    <div class="m-2 p-6 grid md:grid-flow-col lg:grid-flow-col gap-5">
                         <img src="too good to be true.jpg" alt="" class="w-44 h-auto">
                         <div class="m-3 grid grid-col gap-2">
                             <div class="font-bold text-3xl">Too Good To Be True: A funny, smart will-they-won't-they
@@ -250,7 +253,7 @@
 
             <div class="border-2 border-black rounded-3xl hover:shadow-xl hover:shadow-gray-700">
                 <button onclick="toggleAccordion(5)" class="text-left">
-                    <div class="m-2 p-6 flex flex-row gap-5">
+                    <div class="m-2 p-6 grid md:grid-flow-col lg:grid-flow-col gap-5">
                         <img src="To kill a Mockingbird.jpg" alt="" class="w-44 h-auto">
                         <div class="m-3 grid grid-col gap-2">
                             <div class="font-bold text-3xl">To Kill a Mockingbird</div>
@@ -294,7 +297,7 @@
 
             <div class="border-2 border-black rounded-3xl hover:shadow-xl hover:shadow-gray-700">
                 <button onclick="toggleAccordion(6)" class="text-left">
-                    <div class="m-2 p-6 flex flex-row gap-5">
+                    <div class="m-2 p-6 grid md:grid-flow-col lg:grid-flow-col gap-5">
                         <img src="IMG_1067.JPG" alt="" class="w-44 h-auto">
                         <div class="m-3 grid grid-col gap-2">
                             <div class="font-bold text-3xl">The Great Gatsby: The Only Authorized Edition</div>
@@ -342,12 +345,12 @@
         </div>
 
         <!-- Non-Fictional Books -->
-        <div class="m-6 flex flex-col gap-5" id="non-fiction">
+        <div class="m-6 grid grid-flow-row  gap-5" id="non-fiction">
             <div class="font-bold text-3xl flex m-2">Non-Fictional Books</div>
 
             <div class="border-2 border-black rounded-3xl hover:shadow-xl hover:shadow-gray-700">
                 <button onclick="toggleAccordion(7)" class="text-left">
-                    <div class="m-2 p-6 flex flex-row gap-5">
+                    <div class="m-2 p-6 grid md:grid-flow-col lg:grid-flow-col gap-5">
                         <img src="IMG_1066.JPG" alt="" class="w-44 h-auto">
                         <div class="m-3 grid grid-col gap-2">
                             <div class="font-bold text-3xl">Atomic Habits</div>
@@ -387,7 +390,7 @@
 
             <div class="border-2 border-black rounded-3xl hover:shadow-xl hover:shadow-gray-700">
                 <button onclick="toggleAccordion(8)" class="text-left">
-                    <div class="m-2 p-6 flex flex-row gap-5">
+                    <div class="m-2 p-6 grid md:grid-flow-col lg:grid-flow-col gap-5">
                         <img src="IMG_1068.JPG" alt="" class="w-44 h-auto">
                         <div class="m-3 grid grid-col gap-2">
                             <div class="font-bold text-3xl">Sapiens: A Brief History of Humankind</div>
@@ -429,7 +432,7 @@
 
             <div class="border-2 border-black rounded-3xl hover:shadow-xl hover:shadow-gray-700">
                 <button onclick="toggleAccordion(9)" class="text-left">
-                    <div class="m-2 p-6 flex flex-row gap-5">
+                    <div class="m-2 p-6 grid md:grid-flow-col lg:grid-flow-col gap-5">
                         <img src="IMG_1065.JPG" alt="" class="w-44 h-auto">
                         <div class="m-3 grid grid-col gap-2">
                             <div class="font-bold text-3xl">The Power of Habit: Why We Do What We Do in Life and
@@ -478,7 +481,7 @@
     <!-- About Us -->
     <div class="bg-black text-white p-6">
         <div class="m-5 flex justify-center text-xl font-bold">OUR TEAM</div>
-        <div class="flex flex-row justify-center gap-10">
+        <div class="grid md:grid-flow-col lg:grid-flow-col justify-center gap-5">
             <a href="mansi.html">
                 <div
                     class="p-4 rounded-xl text-black font-bold bg-white hover:font-extrabold hover:shadow-xl hover:shadow-gray-600">
